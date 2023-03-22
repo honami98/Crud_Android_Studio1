@@ -52,6 +52,14 @@
             android:inputType="textEmailAddress"
             tools:layout_editor_absoluteX="40dp"
             tools:layout_editor_absoluteY="241dp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxActivo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:enabled="false"
+            android:text="Activo" />
     </LinearLayout>
 
     <LinearLayout
@@ -59,10 +67,11 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/btnRegistrarCliente"
+            android:id="@+id/btnRegistrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registrar"
+            android:onClick="Guardar"
             tools:layout_editor_absoluteX="289dp"
             tools:layout_editor_absoluteY="87dp"
             android:layout_margin="10dp"/>
@@ -77,10 +86,15 @@
             tools:layout_editor_absoluteY="163dp"
             android:layout_margin="10dp"/>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="Consultar"
+            android:onClick="Consultar"/>
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    </LinearLayout>
 
 </LinearLayout>

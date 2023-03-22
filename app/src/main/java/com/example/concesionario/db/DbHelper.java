@@ -7,41 +7,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "dbconcesionario.db";
-    public static final String TABLA_CLIENTE = "cliente";
-    public static final String TABLA_VEHICULO = "vehiculo";
-    public static final String TABLA_VENTA = "venta";
-    private static final int DATABASE_VERSION = 1;
 
-    public DbHelper(@Nullable Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+
+    public DbHelper(@Nullable Context context,String name, SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, name, factory, version);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createClienteTable = "CREATE TABLE cliente (" +
-                "id VARCHAR PRIMARY KEY," +
-                "nombre TEXT not null," +
-                "correo TEXT not null," +
-                "activo TEXT default 'si');";
-        db.execSQL(createClienteTable);
+        db.execSQL(DbManager.createClienteTable);
 
-        String createVehiculoTable = "CREATE TABLE vehiculo (" +
-                "placa VARCHAR PRIMARY KEY," +
-                "marca TEXT not null," +
-                "modelo TEXT not null," +
-                "activo TEXT default 'si');";
-        db.execSQL(createVehiculoTable);
-
-        String createVentaTable = "CREATE TABLE venta (" +
-                "codigo VARCHAR PRIMARY KEY AUTOINCREMENT," +
-                "id_cliente VARCHAR," +
-                "id_vehiculo TEXT," +
-                "fecha DATE not null," +
-                "FOREIGN KEY(id_cliente) REFERENCES cliente(id)," +
-                "FOREIGN KEY(id_vehiculo) REFERENCES vehiculo(placa)" +
-                ");";
-        db.execSQL(createVentaTable);
     }
 
     @Override
