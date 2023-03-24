@@ -14,17 +14,12 @@ public class DbCliente extends DbHelper{
     private char activo;
     Context context;
 
-    /*public dbCliente(int id, String nombre, String correo, char activo) {
-        this.id = id;
-        this.nombre = nombre;
-        this.correo = correo;
-        this.activo = activo;
-    }*/
 
-    public DbCliente(@Nullable Context context){
-        super(context);
-        this.context=context;
+    public DbCliente(@Nullable Context context, String name, SQLiteDatabase.CursorFactory factory, int version, String id) {
+        super(context, name, factory, version);
+        this.id = id;
     }
+
 
     public String getId() {
         return id;
@@ -74,7 +69,7 @@ public class DbCliente extends DbHelper{
         return clientes;
     }*/
 
-    public long insertCliente(String id, String nombre, String correo) {
+   /* public long insertCliente(String id, String nombre, String correo) {
         long colafectadaid=0;
         try{
             DbHelper dbHelper = new DbHelper(context);
@@ -92,7 +87,7 @@ public class DbCliente extends DbHelper{
             e.toString();
         }
             return colafectadaid;
-    }
+    }*/
 
 
 }
