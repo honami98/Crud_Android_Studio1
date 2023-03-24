@@ -41,7 +41,7 @@ public class ClienteActivity extends AppCompatActivity {
 
     }
 
-    public void Guardar(View view){
+    public void guardarCliente(View view){
         id=txtId.getText().toString();
         nombre=txtNombre.getText().toString();
         correo=txtCorreo.getText().toString();
@@ -71,7 +71,7 @@ public class ClienteActivity extends AppCompatActivity {
         }
     }//fin Metodo de guardar
 
-    public void Consultar(View view){
+    public void consultarCliente(View view){
         //Validando que haya una identificacion
         id=txtId.getText().toString();
         if (!id.isEmpty()){

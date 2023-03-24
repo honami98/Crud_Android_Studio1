@@ -9,22 +9,11 @@ public class DbManager {
     private DbHelper conexion;
     private SQLiteDatabase db;
     private static final String DATABASE_NAME = "dbconcesionario";
-    public static final String TABLA_CLIENTE = "cliente";
-    public static final String TABLA_VEHICULO = "vehiculo";
-    public static final String TABLA_VENTA = "venta";
+
     private static final int DATABASE_VERSION = 1;
 
     public DbManager(Context context) {
         conexion=new DbHelper(context,DATABASE_NAME,null,DATABASE_VERSION);
-    }
-
-    public DbManager open() throws SQLException{
-        db=conexion.getWritableDatabase();
-        return this;
-    }
-
-    public void close(){
-        conexion.close();
     }
 
     public static final String createClienteTable = "CREATE TABLE cliente (" +
@@ -41,10 +30,10 @@ public class DbManager {
 
     public static final String createVentaTable = "CREATE TABLE venta (" +
             "codigo TEXT PRIMARY KEY," +
-            "id_cliente VARCHAR," +
-            "id_vehiculo VARCHAR," +
+            "id_cliente TEXT," +
+            "placa_vehiculo TEXT," +
             "fecha DATE not null," +
             "FOREIGN KEY(id_cliente) REFERENCES cliente(id)," +
-            "FOREIGN KEY(id_vehiculo) REFERENCES vehiculo(placa)" +
+            "FOREIGN KEY(placa_vehiculo) REFERENCES vehiculo(placa)" +
             ");";
 }

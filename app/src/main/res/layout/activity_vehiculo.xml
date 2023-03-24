@@ -17,43 +17,44 @@
         android:layout_margin="10dp"/>
 
     <EditText
-        android:id="@+id/txtmarca"
+        android:id="@+id/txtPlaca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Nissan"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="150dp"
-        android:layout_margin="10dp"/>
-
-    <EditText
-        android:id="@+id/txtplaca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="XXX696"
-        android:inputType="textPersonName"
         android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="Placa: XXX696"
+        android:inputType="textPersonName"
         tools:layout_editor_absoluteX="33dp"
         tools:layout_editor_absoluteY="73dp" />
 
     <EditText
-        android:id="@+id/txtmodelo"
+        android:id="@+id/txtMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="Nissan"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <EditText
+        android:id="@+id/txtModelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Sentra - 1996"
+        android:hint="1998"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="33dp"
         tools:layout_editor_absoluteY="228dp" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBoxActivo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Activo"
+        android:enabled="false"
         android:layout_margin="10dp"
         tools:layout_editor_absoluteX="277dp"
         tools:layout_editor_absoluteY="209dp" />
@@ -69,15 +70,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registrar"
+            android:onClick="guardarVehiculo"
             tools:layout_editor_absoluteX="33dp"
             tools:layout_editor_absoluteY="341dp"
-            android:layout_margin="20dp"/>
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/btnConsultarVehiculo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:onClick="consultarVehiculo"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="341dp"
+            android:layout_margin="10dp"/>
 
         <Button
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:onClick="Home"
             android:text="Regresar"
             tools:layout_editor_absoluteX="177dp"

@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-public class DbCliente extends DbHelper{
+public class DbCliente extends DbHelper {
     private String id;
     private String nombre;
     private String correo;
@@ -65,30 +65,8 @@ public class DbCliente extends DbHelper{
         }
         cursor.close();
         db.close();
-        dbHelper.close();
         return clientes;
     }*/
-
-   /* public long insertCliente(String id, String nombre, String correo) {
-        long colafectadaid=0;
-        try{
-            DbHelper dbHelper = new DbHelper(context);
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
-            ContentValues values = new ContentValues();
-            values.put("id", id);
-            values.put("nombre", nombre);
-            values.put("correo", correo);
-            values.put("activo", "si");
-            colafectadaid = db.insert(TABLA_CLIENTE, null, values);
-            db.close();
-            dbHelper.close();
-
-        }catch (Exception e){
-            e.toString();
-        }
-            return colafectadaid;
-    }*/
-
 
 }
 

@@ -53,11 +53,12 @@
             android:layout_margin="10dp"/>
 
         <EditText
-            android:id="@+id/editTextDate"
+            android:id="@+id/txtFecha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="date"
+            android:hint="dd/mm/yyyy"
             android:layout_margin="10dp"
             tools:layout_editor_absoluteX="148dp"
             tools:layout_editor_absoluteY="93dp" />
@@ -80,7 +81,7 @@
             tools:layout_editor_absoluteY="193dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/txtIdCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -98,6 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:text="Buscar"
+        android:onClick="consultarIdVenta"
         tools:layout_editor_absoluteX="29dp"
         tools:layout_editor_absoluteY="228dp" />
 
@@ -116,12 +118,12 @@
             tools:layout_editor_absoluteY="284dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/txtPlacaVehiculo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Placa: XXX767"
+            android:hint="Placa: XXX767"
             android:layout_margin="15dp"
             android:layout_marginRight="100dp"
             tools:layout_editor_absoluteX="162dp"
@@ -133,6 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Buscar"
+        android:onClick="consultarPlacaVenta"
         android:layout_margin="15dp"
         tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="341dp" />
@@ -146,6 +149,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Guardar"
+            android:onClick="guardarVenta"
             android:layout_margin="15dp"
             tools:layout_editor_absoluteX="23dp"
             tools:layout_editor_absoluteY="485dp" />
@@ -156,6 +160,16 @@
             android:layout_height="wrap_content"
             android:text="Regresar"
             android:onClick="Home"
+            android:layout_margin="15dp"
+            tools:layout_editor_absoluteX="157dp"
+            tools:layout_editor_absoluteY="485dp" />
+
+        <Button
+            android:id="@+id/btnBuscarVenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:onClick="consultarCodigo"
             android:layout_margin="15dp"
             tools:layout_editor_absoluteX="157dp"
             tools:layout_editor_absoluteY="485dp" />

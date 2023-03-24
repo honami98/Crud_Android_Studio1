@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registrar"
-            android:onClick="Guardar"
+            android:onClick="guardarCliente"
             tools:layout_editor_absoluteX="289dp"
             tools:layout_editor_absoluteY="87dp"
             android:layout_margin="10dp"/>
@@ -92,8 +92,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:text="Consultar"
-            android:onClick="Consultar"/>
+            android:text="Buscar"
+            android:onClick="consultarCliente"/>
 
     </LinearLayout>
 
